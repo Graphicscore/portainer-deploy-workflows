@@ -63,8 +63,9 @@ jobs:
       - name: checkout deploy tools
         uses: actions/checkout@v4
         with:
-          repository: Graphicscore/portainer-deploy-workflows@master
+          repository: Graphicscore/portainer-deploy-workflows
           path: portainer-deploy-workflows
+          ref: "master"
 
       - name: setup python
         uses: actions/setup-python@v4
