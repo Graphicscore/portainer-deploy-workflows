@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   workflow_call:
     secrets:
-      GITHUB_TOKEN:
+      G_TOKEN:
         required: true
       PORTAINER_URL:
         required: true
