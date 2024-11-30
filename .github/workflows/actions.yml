@@ -11,6 +11,8 @@ on:
         required: true
       CONTAINER_NAME:
         required: true
+      IMAGE_TAG:
+        required: true
 
 env:
   REGISTRY: ghcr.io
