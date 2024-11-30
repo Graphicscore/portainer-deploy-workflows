@@ -3,6 +3,8 @@ name: Build and Deploy
 on:
   workflow_call:
     secrets:
+      G_TOKEN:
+        required: true
       PORTAINER_URL:
         required: true
       PORTAINER_TOKEN:
@@ -30,7 +32,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.G_TOKEN }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
