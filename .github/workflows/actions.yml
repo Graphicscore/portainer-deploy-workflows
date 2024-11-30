@@ -83,4 +83,4 @@ jobs:
           PORTAINER_TOKEN: ${{ secrets.PORTAINER_TOKEN }}
           CONTAINER_NAME: ${{ secrets.CONTAINER_NAME }}
           IMAGE_TAG: ${{ secrets.IMAGE_TAG }}
-        run: ls -la; python portainer-deploy-workflows/deploy-portainer.py .github/workflows/container.json ${{ secrets.CONTAINER_ENV_ARGS }}
+        run: cd portainer-deploy-workflows; find .;cd ..; python portainer-deploy-workflows/.github/workflows/deploy-portainer.py .github/workflows/container.json ${{ secrets.CONTAINER_ENV_ARGS }}
