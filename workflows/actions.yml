@@ -11,9 +11,6 @@ on:
         required: true
       CONTAINER_NAME:
         required: true
-  push:
-    tags:
-      - 'v*'
 
 env:
   REGISTRY: ghcr.io
@@ -50,7 +47,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          push: true
+          push: false
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
