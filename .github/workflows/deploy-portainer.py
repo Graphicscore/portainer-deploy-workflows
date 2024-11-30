@@ -53,7 +53,7 @@ def print_httpcheck(response, code):
         print("error")
 
 
-if len(sys.argv) <= 2:
+if len(sys.argv) < 2:
     print("no create config specified")
     sys.exit(1)
 
