@@ -54,6 +54,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
   deploy-to-portainer:
+    needs: build-image-for-ghcr
     runs-on: ubuntu-latest
     steps:
       - name: checkout main repo
